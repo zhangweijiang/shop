@@ -1,0 +1,40 @@
+   body {
+   	font-size:16px;
+	font-family: 微软雅黑;
+	color:#666;
+   background: #eee;
+   }
+   /*有两个方框就padding-bottom:20px;*/
+   .person {
+   	padding-top: 40px;
+   	padding-bottom: 35px;
+   	text-align: center;
+   	color:white;
+   }
+   
+   .person img {
+   	width: 70px;
+   	height: 70px;
+   }
+   .guanzhu{
+   	font-size:15px;
+   }
+   .beizhu{
+   	font-size:13px;
+   }
+   .orderAll,.bought{
+   	padding:7px 34px;
+   	border: 1px solid white;
+   	border-radius: 7px;
+   }
+   .orderAll{
+   	margin-right: 24px;
+   }
+   .span_content{
+   	margin-top: 14px;
+   }
+   .weui_cell_bd p{
+   	margin-left: 6px;
+   	font-size:14px;
+   }
+

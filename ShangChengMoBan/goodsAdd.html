@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>添加商品</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="css/weuix.min.css">
+    <link rel="stylesheet" href="css/forShop.css">
+    <script src="js/zepto.min.js"></script>
+    <script src="js/picker.js"></script>
+    <script src="js/select.js"></script>
+    <script>
+        $(function() {
+
+            $("#text2").picker({
+                title: "认证分类",
+                toolbarCloseText: '确定',
+                cols: [{
+                    textAlign: 'center',
+                    values: ['工作室'],
+                    displayValues: ['工作室'],
+                }]
+            });
+
+        });
+    </script>
+</head>
+
+<body ontouchstart="" style="background-color: #f8f8f8;">
+<!--导航栏-->
+<div class="weui_btn_warn weui-header ">
+    <div class="weui-header-left">
+        <a class="icon icon-109 f-white" href="javascript:window.history.go(-1);"></a>
+    </div>
+    <h1 class="weui-header-title">添加商品</h1>
+    <!--<div class="weui-header-right">
+        <a class="icon icon-22 f-white"></a>
+    </div>-->
+</div>
+</div>
+<!--列表-->
+<div class="weui_cells weui_cells_form">
+    <div class="weui_cell">
+        <div class="weui_cell_hd"><label class="weui_label">商品名</label></div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" type="text" placeholder="标题 品类品牌型号">
+        </div>
+    </div>
+    <div class="weui_cell">
+        <div class="weui_cell_hd"><label class="weui_label">原价</label></div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" type="number" pattern="[0-9]*" placeholder="原价">
+        </div>
+    </div>
+    <div class="weui_cell">
+        <div class="weui_cell_hd"><label class="weui_label">价格</label></div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" type="number" pattern="[0-9]*" placeholder="现价">
+        </div>
+    </div>
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" placeholder="请简要描述下商品" type="text">
+        </div>
+    </div>
+    <div class="weui_cells weui_cells_form">
+        <div class="weui_cell">
+            <div class="weui_cell_bd weui_cell_primary">
+                <textarea id="textarea" class="weui_textarea" placeholder="描述一下你的商品" rows="3"></textarea>
+                <div class="weui_textarea_counter"><span id="count">0</span>/<span id="count_max">20</span></div>
+            </div>
+        </div>
+    </div>
+    <!--<div class="weui_cell weui_cell_select">
+        <div class="weui_cell_bd weui_cell_primary">
+            <select class="weui_select" name="select1">
+                <label class="weui_label">店铺名</label>
+                <option selected="" value="1">店铺分类</option>
+                <option value="2">衣服</option>
+                <option value="3">裤子</option>
+                <option value="4">鞋</option>
+            </select>
+        </div>
+    </div>-->
+
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <div class="weui_uploader">
+                <div class="weui_uploader_hd weui_cell">
+                    <div class="weui_cell_bd weui_cell_primary">商品图片</div>
+                    <div class="weui_cell_ft">0/5</div>
+                </div>
+                <div class="weui_uploader_bd">
+                    <div class="weui_uploader_input_wrp">
+                        <input class="weui_uploader_input" type="file" accept="image/*" multiple="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--<div class="weui_cells_tips">云创微生活</div>-->
+<div class="weui_btn_area">
+    <a class="weui_btn weui_btn_primary" href="javascript:" id="btn">确定</a>
+</div>
+<div class="weui-footer">
+    <p class="weui-footer-links">
+        <a href="javascript:void(0);" class="weui-footer-link">云创微生活</a>
+    </p>
+    <p class="weui-footer-text">Copyright © 2008-2016 移植</p>
+</div>
+</body>
+
+</html>

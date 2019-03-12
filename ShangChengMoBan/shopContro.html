@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="css/weuix.min.css">
+    <link rel="stylesheet"  href="css/myt.css">
+    <script src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/swipe.js"></script>
+    <script>
+        $(function(){
+            $('#slide1').swipeSlide({
+                autoSwipe:true,//自动切换默认是
+                speed:1000,//速度默认4000
+                continuousScroll:true,//默认否
+                transitionType:'cubic-bezier(0.22, 0.69, 0.72, 0.88)',//过渡动画linear/ease/ease-in/ease-out/ease-in-out/cubic-bezier
+                lazyLoad:true,//懒加载默认否
+                firstCallback : function(i,sum,me){
+                    me.find('.dot').children().first().addClass('cur');
+                },
+                callback : function(i,sum,me){
+                    me.find('.dot').children().eq(i).addClass('cur').siblings().removeClass('cur');
+                }
+            });
+        });
+
+    </script>
+    <script>
+        $(function(){
+            $('#slide2').swipeSlide({
+                autoSwipe:true,//自动切换默认是
+                speed:3000,//速度默认4000
+                continuousScroll:true,//默认否
+                transitionType:'cubic-bezier(0.22, 0.69, 0.72, 0.88)',//过渡动画linear/ease/ease-in/ease-out/ease-in-out/cubic-bezier
+                lazyLoad:true,//懒加载默认否
+                firstCallback : function(i,sum,me){
+                    me.find('.dot').children().first().addClass('cur');
+                },
+                callback : function(i,sum,me){
+                    me.find('.dot').children().eq(i).addClass('cur').siblings().removeClass('cur');
+                }
+            });
+
+            $('#slide3').swipeSlide({
+                autoSwipe:true,//自动切换默认是
+                speed:3000,//速度默认4000
+                continuousScroll:true,//默认否
+                transitionType:'ease-in'
+            });
+        })
+    </script>
+
+</head>
+
+<body ontouchstart="" style="background-color:#EDEAEA ;">
+<div class="weui_btn_warn weui-header ">
+    <div class="weui-header-left"> <a class="icon icon-109 f-white" href="javascript:window.history.go(-1);"></a>  </div>
+    <h1 class="weui-header-title">店铺管理</h1>
+    <!--<div class="weui-header-right"><a class="icon icon-22 f-white"></a></div>-->
+</div>
+<div class="slide" id="slide2">
+    <ul>
+        <li>
+            <a href="#">
+                <img src="img/timg.jpg" data-src="img/1.jpg" alt="">
+            </a>
+
+        </li>
+        <li>
+            <a href="#">
+                <img src="img/timg.jpg" data-src="img/2.jpg" alt="">
+            </a>
+
+        </li>
+        <li>
+            <a href="#">
+                <img src="img/timg.jpg" data-src="img/3.jpg" alt="">
+            </a>
+
+        </li>
+    </ul>
+    <div class="dot">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+
+<div style="background-color:#FFFFFF">
+    <h4 style="color: #38C16E"></h4>
+    <div class="weui_grids" >
+        <a href="myshop.html" class="weui_grid js_grid" style="">
+            <div class="weui_grid_icon">
+                <img src="img/homepage_fill.png" alt="">
+            </div>
+            <p class="weui_grid_label">
+                店铺装修
+            </p>
+        </a>
+        <a href="goodsContro.html" class="weui_grid js_grid">
+            <div class="weui_grid_icon">
+                <img src="img/calendar.png"  alt="">
+            </div>
+            <p class="weui_grid_label">
+                商品管理
+            </p>
+        </a>
+        <a href="javascript:;" class="weui_grid js_grid">
+            <div class="weui_grid_icon">
+                <img src="img/icon_nav_panel.png" alt="">
+            </div>
+            <p class="weui_grid_label">
+                订单管理
+            </p>
+        </a>
+        <a href="javascript:;" class="weui_grid js_grid">
+            <div class="weui_grid_icon">
+                <img src="img/icon_nav_actionSheet.png" alt="">
+            </div>
+            <p class="weui_grid_label">
+                商品分类
+            </p>
+        </a>
+        <a href="javascript:;" class="weui_grid js_grid last">
+             <div class="weui_grid_icon">
+                <img src="img/icon_nav_actionSheet.png" alt="">
+            </div>
+            <p class="weui_grid_label">
+                宣传推广
+            </p>
+        </a>
+        <a href="javascript:;" class="weui_grid js_grid last">
+           <div class="weui_grid_icon">
+                <img src="img/icon_nav_actionSheet.png" alt="">
+            </div>
+            <p class="weui_grid_label">
+                敬请期待
+            </p>
+        </a>
+
+
+
+    </div>
+</div>
+<div class="weui_panel weui_panel_access" style="width: 90%;margin: 0px auto; border-radius: 15px;margin-top: 8%;">
+
+    <div class="weui_panel_bd">
+        <div class="weui_media_box weui_media_text">
+            <h4 class="weui_media_title">最新公告
+                <span style="position: relative;left:60%"  ><img src="img/form.png" width="25px" height="25px"></span></h4>
+            <p class="weui_media_desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。
+
+            </p>
+        </div>
+
+    </div>
+    <a href="javascript:void(0);" class="weui_panel_ft">查看更多</a>
+</div>
+
+<div class="searchbar_wrap"  >
+</div>
+<div class="weui_cells_title">&nbsp;</div>
+
+<div class="weui_cells_title">&nbsp;</div>
+
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+
+
+        $("a").click(function(){
+            $(this).siblings().removeClass('weui_bar_item_on');
+            $(this).addClass("weui_bar_item_on");
+            $(".weui_tabbar_item #one").attr("src","img/主页.png");
+            $(".weui_tabbar_item #two").attr("src","img/个人中心.png");
+            $(this).find("#one").attr("src","img/2.png");
+            $(this).find("#two").attr("src","img/3.png");
+        });
+
+    });
+</script>
+
+</body></html>

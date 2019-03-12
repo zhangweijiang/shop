@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>店铺申请</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<link rel="stylesheet" href="css/weuix.min.css">
+		<link rel="stylesheet" href="css/forShop.css">
+		<script src="js/zepto.min.js"></script>
+		<script src="js/picker.js"></script>
+		<script src="js/select.js"></script>
+		<script>
+			$(function() {
+
+				$("#text2").picker({
+					title: "你喜欢的国家",
+					toolbarCloseText: '确定',
+					cols: [{
+						textAlign: 'center',
+						values: ['衣服', '裤子', '鞋'],
+						displayValues: ['衣服', '裤子', '鞋'],
+					}]
+				});
+
+			});
+		</script>
+	</head>
+
+	<body ontouchstart="" style="background-color: #f8f8f8;">
+		<!--导航栏-->
+		<div class="weui_btn_warn weui-header ">
+			<div class="weui-header-left">
+				<a class="icon icon-109 f-white" href="javascript:window.history.go(-1);"></a>
+			</div>
+			<h1 class="weui-header-title">店铺申请</h1>
+			<!--<div class="weui-header-right">
+				<a class="icon icon-22 f-white"></a>
+			</div>-->
+		</div>
+		</div>
+		<!--列表-->
+		<div class="weui_cells weui_cells_form">
+			<div class="weui_cell">
+				<div class="weui_cell_hd"><label class="weui_label">店主名</label></div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<input class="weui_input" type="text" placeholder="请输入您的店主名">
+				</div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd"><label class="weui_label">店铺名</label></div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<input class="weui_input" type="text" placeholder="请输入您的店铺名">
+				</div>
+			</div>
+			<!--<div class="weui_cell weui_cell_select">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <select class="weui_select" name="select1">
+                    	<label class="weui_label">店铺名</label>
+                    	<option selected="" value="1">店铺分类</option>
+                        <option value="2">衣服</option>
+                        <option value="3">裤子</option>
+                        <option value="4">鞋</option>
+                    </select>
+                </div>
+            </div>-->
+			<div class="weui_cell">
+				<div class="weui_cell_hd"><label for="" class="weui_label">店铺分类</label></div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<input class="weui_input" type="text" value="" id='text2' placeholder="请选择你的店铺分类" />
+				</div>
+			</div>
+
+			<div class="weui_cell">
+				<div class="weui_cell_hd"><label class="weui_label">联系方式</label></div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<input class="weui_input" type="tel" required="" pattern="[0-9]{11}" maxlength="11" placeholder="输入您现在的手机号" emptytips="请输入手机号" notmatchtips="请输入正确的手机号">
+				</div>
+				<div class="weui_cell_ft">
+					<i class="weui_icon_warn"></i>
+				</div>
+			</div>
+
+			<div class="weui_cell">
+				<div class="weui_cell_bd weui_cell_primary">
+					<div class="weui_uploader">
+						<div class="weui_uploader_hd weui_cell">
+							<div class="weui_cell_bd weui_cell_primary">个人照片（证件照）</div>
+							<div class="weui_cell_ft">0/1</div>
+						</div>
+						<div class="weui_uploader_bd">
+							<div class="weui_uploader_input_wrp">
+								<input class="weui_uploader_input" type="file" accept="image/*" multiple="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_bd weui_cell_primary">
+					<div class="weui_uploader">
+						<div class="weui_uploader_hd weui_cell">
+							<div class="weui_cell_bd weui_cell_primary">身份证/学生证</div>
+							<div class="weui_cell_ft">0/2</div>
+						</div>
+						<div class="weui_uploader_bd">
+							<div class="weui_uploader_input_wrp">
+								<input class="weui_uploader_input" type="file" accept="image/*" multiple="">
+							</div>
+							<div class="weui_uploader_input_wrp">
+								<input class="weui_uploader_input" type="file" accept="image/*" multiple="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_bd weui_cell_primary">
+					<div class="weui_uploader">
+						<div class="weui_uploader_hd weui_cell">
+							<div class="weui_cell_bd weui_cell_primary">有关证明</div>
+							<div class="weui_cell_ft">0/100</div>
+						</div>
+						<div class="weui_uploader_bd">
+							<div class="weui_uploader_input_wrp">
+								<input class="weui_uploader_input" type="file" accept="image/*" multiple="">
+							</div>
+							<div class="weui_uploader_input_wrp">
+								<input class="weui_uploader_input" type="file" accept="image/*" multiple="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<label for="weuiAgree" class="weui-agree">
+			<input id="weuiAgree" class="weui-agree-checkbox" type="checkbox">
+			<span class="weui-agree-text">
+                阅读并同意<a href="javascript:void(0);" class="open-popup " data-target="#popup">《相关条款》</a>
+            </span>
+		</label>
+		<!--<div class="weui_cells_tips">云创微生活</div>-->
+		<div class="weui_btn_area">
+			<a class="weui_btn weui_btn_primary" href="javascript:" id="btn">确定申请</a>
+		</div>
+		<div class="weui-footer">
+			<p class="weui-footer-links">
+				<a href="javascript:void(0);" class="weui-footer-link">云创微生活</a>
+			</p>
+			<p class="weui-footer-text">Copyright © 2008-2016 移植</p>
+		</div>
+
+		<div id="popup" class="weui-popup-container">
+			<div class="weui-popup-modal">
+				<div class="weui_article">
+					<h2 class="title">相关条约</h2>
+					<section>
+						<h3>这里是相关条约的内容</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute</p>
+					</section>
+				</div>
+				<p class='page-bd-15'><a href="javascript:;" class="weui_btn weui_btn_plain_primary close-popup" id="p1">关闭</a></p>
+			</div>
+		</div>
+	</body>
+
+</html>

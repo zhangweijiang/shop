@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>店铺管理</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="css/weuix.min.css">
+    <script src="js/zepto.min.js"></script>
+        <script>
+           $(document).on("click", ".ac", function() {
+        $.actions({
+          actions: [
+            {
+              text: "订单详情",
+              className: "bg-white f-primary",
+               onClick: function() {
+                 location.href= 'orderlist.html'
+              }
+            },
+            {
+              text: "用户评价",
+              className: "bg-white f-primary",
+               onClick: function() {
+                 location.href= 'orderlist.html'
+              }
+            },
+          ]
+        });
+      });  
+    </script>
+    <style>
+        .btn-area{
+            text-align: right;
+            margin-right:15px;
+        }
+    </style>
+</head>
+<body>
+<div class="weui_btn_warn weui-header ">
+    <div class="weui-header-left"> <a class="icon icon-109 f-white" href="javascript:window.history.go(-1);"></a>  </div>
+    <h1 class="weui-header-title">订单列表</h1>
+    <div class="weui-header-right"><a class="icon icon-36 f-white" href="goodsTypeAdd.html"></a></div>
+</div>
+<div class="weui_cells" style="margin-top:0;">   
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>新鲜出炉</p>
+        </div>
+        <div class="weui_cell_ft">
+          <div class="btn-area">
+              <a href="goodsTypeAdd.html" class="weui_btn weui_btn_mini weui_btn_primary">编辑</a>
+              <a href="javascript:;" class="weui_btn weui_btn_mini weui_btn_warn">删除</a>
+              <a href="javascript:void(0)" class="weui_btn weui_btn_mini weui_btn_default ac" >我的商品</a>
+          </div>
+        </div>
+    </div>
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>新鲜出炉</p>
+        </div>
+        <div class="weui_cell_ft">
+          <div class="btn-area">
+              <a href="goodsAdd.html" class="weui_btn weui_btn_mini weui_btn_primary">编辑</a>
+              <a href="javascript:;" class="weui_btn weui_btn_mini weui_btn_warn">删除</a>
+              <a href="javascript:void(0)" class="weui_btn weui_btn_mini weui_btn_default ac" >我的商品</a>
+          </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

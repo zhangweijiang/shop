@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>番职创客平台</title>
+    <link rel="stylesheet" type="text/css" href="css/weuix.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="js/swipe.js"></script>
+
+      <script>
+  $(function(){
+ 
+ $('.searchbar_wrap').searchBar({
+    cancelText:"取消",
+    searchText:'店铺名',
+    onfocus: function (value) {
+        
+    },
+    onblur:function(value) {
+
+    },
+    oninput: function(value) {
+ 
+    },
+    onsubmit:function(value){
+    },
+    oncancel:function(){
+
+    },
+
+    onclear:function(){
+
+    }
+});
+
+ $('#slide2').swipeSlide({
+autoSwipe:true,//自动切换默认是
+speed:3000,//速度默认4000
+continuousScroll:true,//默认否
+transitionType:'cubic-bezier(0.22, 0.69, 0.72, 0.88)',//过渡动画linear/ease/ease-in/ease-out/ease-in-out/cubic-bezier
+lazyLoad:true,//懒加载默认否
+firstCallback : function(i,sum,me){
+            me.find('.dot').children().first().addClass('cur');
+        },
+        callback : function(i,sum,me){
+            me.find('.dot').children().eq(i).addClass('cur').siblings().removeClass('cur');
+        }
+});
+
+ $('#slide3').swipeSlide({
+autoSwipe:true,//自动切换默认是
+speed:3000,//速度默认4000
+continuousScroll:true,//默认否
+transitionType:'ease-in'
+});
+
+  });     
+      </script>
+
+<script>
+            $(function() {
+                //定义文章长度
+                const maxParagraphLength = 100;
+                //定义全文按钮
+                const paragraphExtender = $('.paragraphExtender');
+                var toggleFullParagraph = false;
+                const paragraph = $('.paragraph');
+                $('.paragraph').each(function() {
+                    var next = $(this).parent().next();
+                    var paragraphText = $(this).text();
+                    var paragraphLength = $(this).text().length;
+                    if(paragraphLength < maxParagraphLength) {
+                        next.hide();
+                    } else {
+                        $(this).html(paragraphText.substring(0, maxParagraphLength) + '...');
+                        $(next).click(function() {
+                            if(toggleFullParagraph) {
+                                toggleFullParagraph = false;
+                                $(next).html('显示全部');
+                                $(this).prev().find('p.paragraph').html(paragraphText.substring(0, maxParagraphLength) + '...');
+                            } else {
+                                toggleFullParagraph = true;
+                                $(next).html('收起');
+                                $(this).prev().find('p.paragraph').html(paragraphText);
+                            }
+                        });
+                    }
+                });
+            });
+        </script>
+        <style type="text/css">
+            .paragraphExtender{
+                color:#18b4ed;
+            }
+        </style>
+</head>
+<body ontouchstart style="background-color:#E0E0E0;">
+    <!--搜索-->
+    <div >
+            <p class="page-hd-desc"></p>
+        </div>
+    <div class="searchbar_wrap">
+</div>
+    <!--搜索-->
+    <!--轮播-->
+    <div class="slide" id="slide2">
+    <ul>
+        <li>
+            <a href="#">
+                <img src="img/timg.jpg" data-src="img/1.jpg" alt="">
+            </a>
+           
+        </li>
+        <li>
+            <a href="#">
+                <img src="img/timg.jpg" data-src="img/2.jpg" alt="">
+            </a>
+            
+        </li>
+        <li>
+            <a href="#">
+                <img src="img/timg.jpg" data-src="img/3.jpg" alt="">
+            </a>
+            
+        </li>
+    </ul>
+    <div class="dot">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+    <!--轮播-->
+    <!--活动-->
+    <div class="weui-flex huodong" style="height:200px;margin-top:2px;">
+            <div style="width:40%;border-right:1px solid #CCC;box-sizing: border-box;">
+                <img src="img/lo1.jpg">
+            </div>
+             <div style="width:60%">
+                <div style="height:100px;border-bottom:1px solid #CCC;"><a href="#"><img src="img/lo6.jpg"></a></div>
+                <div style="height:100px;">
+                    <div style="width:50%;float:left;border-right:1px solid #CCC;box-sizing: border-box;height:100px;"><a href="#"><img src="img/lo4.jpg"></a></div>
+                    <div style="width:50%;float:left;height:100px;"><a href="#"><img src="img/lo3.jpg"></a></div>
+                </div>
+            </div>
+    </div>
+    <!--活动-->
+    <!--广告-->
+    <div class="slide" id="slide3" style="background:#eee;height:40px;line-height:40px;rgba(0, 0, 0, 0.01);vertical-align:middle;margin:0 auto;margin-top:2px;">
+        <ul>
+        <li>
+        <div  class='txt'><a href="#">创客乐购1</a></div></li>
+        <li>
+            <div  class='txt'><a href="#">创客乐购1111</a></div>
+        </li>
+        <li>
+        <div  class='txt'><a href="#">这里是广告哦</a></div>
+        </li>
+        </ul>
+    </div>
+    <!--广告-->
+    <!--热门频道-->
+    <div class="weui-flex pindao" style="background:white;margin-top:2px;">
+            <div class="weui-flex-item">
+                <a href="#"><div><img src="img/dr.jpg"></div>
+                <p>盆栽</p></a>
+            </div>
+            <div class="weui-flex-item">
+               <a href="#"><div><img src="img/kh.jpg"></div>
+                <p>化妆品</p></a>
+            </div>
+            <div class="weui-flex-item">
+<a href="#"><div><img src="img/sp.jpg"></div>
+                <p>零食</p></a>
+            </div>
+            <div class="weui-flex-item">
+                <a href="#"><div><img src="img/ss.jpeg"></div>
+                <p>珠宝</p></a>
+            </div>
+    </div>
+    <div class="weui-flex pindao" style="background:white;">
+            <div class="weui-flex-item">
+               <a href="#"><div><img src="img/wj.jpeg"></div>
+                <p>服饰</p></a>
+            </div>
+            <div class="weui-flex-item">
+                <a href="#"><div><img src="img/xfy.jpg"></div>
+                <p>日常用品</p></a>
+            </div>
+            <div class="weui-flex-item">
+           <a href="#"><div><img src="img/yag.jpg"></div>
+                <p>生活用品</p></a>
+            </div>
+            <div class="weui-flex-item">
+               <a href="#"><div><img src="img/wz.jpg"></div>
+                <p>宿舍用品</p></a>
+            </div>
+    </div>
+    <!--热门频道-->
+    <!--推荐店铺-->
+    <div class="shopList" >
+        <div class="shop-title">推荐商家</div>
+         <ul style="padding-bottom:25px;">
+            
+                <li class="shop istop">
+                <a href="selfshop.html">
+                <div class="shop-logo"><img src="img/shop1.jpg"/></div>
+                <div style="width:80%;float:left;" class="233">
+                    <p class="shop_name">哎莱依<!-- <span class="badge">商店</span> --></p>
+                    <p class="xiaoliang"><span style="">月浏览量:1500</span> <span style="margin-left:15%;">月销量:283单</span></p>
+                    <p class="fenlei"><!-- <span class="icon icon-93"></span> -->分类:<span class="weui-badge" style="margin-left: 5px;">服装</span></p>
+                    <p class="jianjie paragraph" id="paragraph1">简介：
+                        我们是卖服装的服装店，有围巾，袜子，衣服，帽子等，围巾，袜子，衣服，帽子等欢迎大家进入选购啦啦啦啦啦帽子等欢迎大家进入选购啦啦啦啦啦我们是卖服装的服装店，有围巾，袜子，衣服，帽子等，围巾，袜子，衣服，帽子等欢迎大家进入选购啦啦啦啦啦帽子等欢迎大家进入选购啦啦啦啦啦
+                    </p>
+                     </a>
+                    <a id="paragraphExtender1" class="paragraphExtender">显示全部</a>
+                    
+                </div>
+            </li>
+           
+            
+                <li class="shop">
+                <a href="selfshop.html">
+                <div class="shop-logo"><img src="img/shop2.jpg"/></div>
+                <div style="width:80%;float:left;">
+                    <p class="shop_name">尚做<span class="badge">工作室</span></p>
+                    <p class="xiaoliang"><span style="">月浏览量:1754</span> <span style="margin-left:15%;">月销量:260单</span></p>
+                    <p class="fenlei"><!-- <span class="icon icon-93"></span> -->分类:<span class="weui-badge" style="margin-left: 5px;">手工</span></p>
+                    <p class="jianjie paragraph"  id="paragraph2">简介：
+                    我是做装饰品的，有首饰，项链，戒指等等
+                    </p> </a>
+                    <a id="paragraphExtender2" class="paragraphExtender">显示全部</a>
+                </div>
+            </li>
+           
+            
+            <li class="shop">
+            <a href="selfshop.html">
+                <div class="shop-logo"><img src="img/shop3.jpg"/></div>
+                <div style="width:80%;float:left;">
+                    <p class="shop_name">惠慈家居<!-- <span class="badge">商店</span> --></p>
+                    <p class="xiaoliang"><span style="">月浏览量:1500</span> <span style="margin-left:15%;">月销量:149单</span></p>
+                    <p class="fenlei"><!-- <span class="icon icon-93"></span> -->分类:<span class="weui-badge" style="margin-left: 5px;">生活</span></p>
+                    <p class="jianjie paragraph" id="paragraph3">简介：
+                    我们是买生活用品的一个商店，有蚊帐，吊床,牙膏，牙刷等
+                    </p>  </a><a id="paragraphExtender3" class="paragraphExtender">显示全部</a>
+                </div>
+           
+            </li>
+           
+        </ul>
+    </div>
+    <div class="weui-footer">
+            <p class="weui-footer-links">
+                <a href="javascript:void(0);" class="weui-footer-link">云创微生活科技</a>
+               
+            </p>
+            <p class="weui-footer-text">Copyright © 2008-2016 移植</p>
+    </div>
+    <div class="weui_cells_title" style="height:45px;">&nbsp;</div> 
+    
+   <div class="weui_tab tab-bottom" style="height:45px;">
+               
+            <div class="weui_tabbar ">
+                <a href="index.html" class="weui_tabbar_item weui_bar_item_on">
+                    <div class="weui_tabbar_icon">
+                        <img src="img/footer01.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label">首页</p>
+                </a>
+                <a href="shop.html" class="weui_tabbar_item">
+                    <div class="weui_tabbar_icon">
+                        <img src="img/footer02.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label">购物街</p>
+                </a>
+                <a href="shoping.html" class="weui_tabbar_item ">
+                    <div class="weui_tabbar_icon">
+                        <img src="img/footer03.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label">购物车</p>
+                </a>   
+                  <a href="user.html" class="weui_tabbar_item ">
+                    <div class="weui_tabbar_icon">
+                        <img src="img/footer04.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label">个人中心</p>
+                </a>   
+
+            </div>
+    </div>
+</body>
+</html>
